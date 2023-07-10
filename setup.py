@@ -152,7 +152,7 @@ setup(
     name="detectron2",
     version=get_version(),
     author="FAIR",
-    url="https://github.com/dishankmittal/detectron2",
+    url="https://github.com/facebookresearch/detectron2",
     description="Detectron2 is FAIR's next-generation research "
     "platform for object detection and segmentation.",
     packages=find_packages(exclude=("configs", "tests*")) + list(PROJECTS.keys()),
@@ -163,7 +163,7 @@ setup(
         # These dependencies are not pure-python.
         # In general, avoid adding dependencies that are not pure-python because they are not
         # guaranteed to be installable by `pip install` on all platforms.
-        "Pillow==9.5.0",  # or use pillow-simd for better performance
+        "Pillow>=7.1",  # or use pillow-simd for better performance
         "matplotlib",  # TODO move it to optional after we add opencv visualization
         "pycocotools>=2.0.2",  # corresponds to https://github.com/ppwwyyxx/cocoapi
         # Do not add opencv here. Just like pytorch, user should install
